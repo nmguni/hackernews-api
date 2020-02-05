@@ -20,6 +20,7 @@ export const Story = ({ storyId }) => {
   return story && story.url ? (
     <StoryWrapper data-test-id="story">
       <StoryTitle>
+        <a title="Up Vote">^</a>
         <a href={story.url}>{story.title}</a>
       </StoryTitle>
 

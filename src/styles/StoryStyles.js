@@ -1,9 +1,16 @@
 import styled from "styled-components";
 
 export const StoryWrapper = styled.section`
-  padding-top: 10px;
+  ${"" /* padding-top: 10px; */}
   margin-bottom: 20px;
-  border-top: 1px solid #cccccc;
+  background-color: #90caf9;
+  border-radius: 4px;
+  padding: 18px;
+  line-height: 2rem;
+  ${"" /* border-top: 1px solid #cccccc; */}
+  -webkit-box-shadow: -6px 7px 25px -11px rgba(0,0,0,0.75);
+  -moz-box-shadow: -6px 7px 25px -11px rgba(0, 0, 0, 0.75);
+  box-shadow: -6px 7px 25px -11px rgba(0, 0, 0, 0.75);
 
   &:first-of-type {
     border-top: 0;
@@ -23,14 +30,20 @@ export const StoryTitle = styled.h1`
   text-decoration: none;
 
   a {
-    color: #2e2e2c;
-    background-color: #f8dc3d;
+    color: #fff;
+    ${"" /* background-color: #bbdefb; */}
     text-decoration: none;
+    padding: 2.5px;
+    border-radius: 4px;
+  }
+  a:hover {
+    background-color: #bbdefb;
   }
 `;
 
 export const StoryMeta = styled.div`
   font-style: italic;
+
 
   > span:first-child {
     margin-right: 10px;
@@ -47,6 +60,6 @@ export const StoryMeta = styled.div`
 `;
 
 export const StoryMetaElement = styled.span`
-  font-weight: bold;
+  font-weight: 800;
   color: ${props => props.color || "red"};
 `;
