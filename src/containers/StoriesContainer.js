@@ -11,11 +11,11 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Nav from "./nav";
 export const StoriesContainer = () => {
   // const { count } = useInfiniteScroll();
-  // const [storyIds, setStoryIds] = useState([]);
+  const [storyIds, setStoryIds] = useState([]);
 
-  // useEffect(() => {
-  //   getStroyIds().then(data => setStoryIds(data));
-  // }, []);
+  useEffect(() => {
+    getStroyIds().then(data => setStoryIds(data));
+  }, []);
 
   // [] when them component mounts do this...
   //[stoyIdsUpdates (true/false)] useEffect will watch for change

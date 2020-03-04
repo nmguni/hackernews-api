@@ -10,7 +10,7 @@ import {
 } from "../styles/StoryStyles";
 import { mapTime } from "../mappers/mapTime";
 
-export const Story = ({ storyId }) => {
+export const Questions = ({ storyId }) => {
   const [story, setStory] = useState({});
 
   useEffect(() => {
@@ -37,5 +37,18 @@ export const Story = ({ storyId }) => {
   //     </StoryMeta>
   //   </StoryWrapper>
   // ) : null;
-  return <p>Im story</p>;
+
+  return story && story.url ? (
+    <>
+      <a href={story.url}>
+        <p>{story.title}</p>
+      </a>
+      by: <p>{story.by}</p>
+      score: <p>{story.score}</p>
+      Text: <p>{story.text}</p>
+      Posted: <p>{story.time}</p>
+      title: <p>{story.title}</p>
+      type" <p>{story.type}</p>
+    </>
+  ) : null;
 };
