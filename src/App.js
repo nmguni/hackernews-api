@@ -2,7 +2,9 @@ import React from "react";
 import { StoriesContainer } from "./containers/StoriesContainer";
 import { JobsContainer } from "./containers/jobsContainer";
 import { Ask } from "./containers/askContainer";
-export const App = () => <JobsContainer />;
+import { UserForm } from "./components/userForm";
+
+export const App = () => <UserForm />;
 
 // export const App = () => {
 //   const [storyIds, setStoryIds] = useState([]);

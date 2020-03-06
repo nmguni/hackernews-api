@@ -1,6 +1,6 @@
 import axios from "axios";
 import { selectFields } from "../selectors/selectFields";
-import { questonsFields } from "../selectors/questonsFields";
+// import { questonsFields } from "../selectors/questonsFields";
 // BASE
 export const baseUrl = "https://hacker-news.firebaseio.com/v0/";
 // STORIES
@@ -21,7 +21,7 @@ export const getStory = async storyId => {
   return result;
 };
 
-// storye ids
+// story ids
 export const getStroyIds = async () => {
   // micro task que
   // once you got the data get the data
