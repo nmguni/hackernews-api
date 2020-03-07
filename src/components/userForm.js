@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import { FormUserDetails } from "./formUserDetales";
+import { FormPersonalDetails } from "./formPersonalDetails";
+import { Confirm } from "./conferm";
+
+import { Success } from "./success";
 
 export class UserForm extends Component {
   state = {
-    set: 1,
+    step: 1,
     firstName: "",
     lastName: "",
     email: "",
@@ -12,7 +16,7 @@ export class UserForm extends Component {
     bio: ""
   };
 
-  // procceed to next step
+  // Proceed to next step
   nextStep = () => {
     const { step } = this.state;
     this.setState({
@@ -20,7 +24,7 @@ export class UserForm extends Component {
     });
   };
 
-  // go back to prev step
+  // Go back to prev step
   prevStep = () => {
     const { step } = this.state;
     this.setState({
@@ -28,7 +32,7 @@ export class UserForm extends Component {
     });
   };
 
-  // handle fields change
+  // Handle fields change
   handleChange = input => e => {
     this.setState({ [input]: e.target.value });
   };
@@ -49,30 +53,23 @@ export class UserForm extends Component {
         );
       case 2:
         return (
-          <h1>personal </h1>
-          // <FormPersonalDetails
-          //   nextStep={this.nextStep}
-          //   prevStep={this.prevStep}
-          //   handleChange={this.handleChange}
-          //   values={values}
-          // />
+          <FormPersonalDetails
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
         );
       case 3:
         return (
-          <h1>confrim </h1>
-          // <Confirm
-          //   nextStep={this.nextStep}
-          //   prevStep={this.prevStep}
-          //   values={values}
-          // />
+          <Confirm
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            values={values}
+          />
         );
       case 4:
-        return (
-          <div>
-            {" "}
-            <h1>personal </h1>
-          </div>
-        );
+        return <Success />;
     }
   }
 }

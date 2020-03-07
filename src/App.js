@@ -4,7 +4,7 @@ import { JobsContainer } from "./containers/jobsContainer";
 import { Ask } from "./containers/askContainer";
 import { UserForm } from "./components/userForm";
 
-export const App = () => <UserForm />;
+export const App = () => <StoriesContainer />;
 
 // export const App = () => {
 //   const [storyIds, setStoryIds] = useState([]);

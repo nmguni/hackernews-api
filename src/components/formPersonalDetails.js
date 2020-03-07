@@ -6,10 +6,14 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 
-export class FormUserDetails extends Component {
+export class FormPersonalDetails extends Component {
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
+  };
+  back = e => {
+    e.preventDefault();
+    this.props.prevStep();
   };
 
   render() {
@@ -17,30 +21,30 @@ export class FormUserDetails extends Component {
     return (
       <Box m={5}>
         <React.Fragment>
-          <AppBar position="static" title="Enter User Details" />
+          <h1>Enter Personal Detail</h1>
           <TextField
-            placeholder="Enter Your First Name"
-            label="First Name"
-            onChange={handleChange("firstName")}
-            defaultValue={values.firstName}
+            placeholder="Enter Your Occupation"
+            label="Occupation"
+            onChange={handleChange("occupation")}
+            defaultValue={values.Occupation}
             margin="normal"
             // fullWidth="true"
           />
           <br />
           <TextField
-            placeholder="Enter Your Last Name"
-            label="Last Name"
-            onChange={handleChange("lastName")}
-            defaultValue={values.lastName}
+            placeholder="Enter Your Last City"
+            label="City"
+            onChange={handleChange("city")}
+            defaultValue={values.city}
             margin="normal"
             // fullWidth="true"
           />
           <br />
           <TextField
-            placeholder="Enter Your Email"
-            label="Email"
-            onChange={handleChange("email")}
-            defaultValue={values.email}
+            placeholder="Enter Your Bio"
+            label="Bio"
+            onChange={handleChange("bio")}
+            defaultValue={values.bio}
             margin="normal"
             // fullWidth="true"
           />
@@ -48,10 +52,18 @@ export class FormUserDetails extends Component {
           <Button color="primary" variant="contained" onClick={this.continue}>
             Continue
           </Button>
+          <Button
+            style={{ marginLeft: "10px", backgroundColor: "red" }}
+            color="primary"
+            variant="contained"
+            onClick={this.back}
+          >
+            Back
+          </Button>
         </React.Fragment>
       </Box>
     );
   }
 }
 
-export default FormUserDetails;
+export default FormPersonalDetails;

@@ -1,9 +1,10 @@
 import React from "react";
+import UserForm from "../components/userForm";
 
 export const Signin = () => {
   return (
     <div>
-      <h1 style={{ fontSize: "8rem" }}>Signin</h1>
+      <UserForm />
     </div>
   );
 };
