@@ -3,6 +3,7 @@ import { StoriesContainer } from "./containers/StoriesContainer";
 import { JobsContainer } from "./containers/jobsContainer";
 import { Ask } from "./containers/askContainer";
 import { UserForm } from "./components/userForm";
+import { Signin } from "./containers/signin";
 
 export const App = () => <StoriesContainer />;
 

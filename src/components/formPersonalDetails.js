@@ -19,7 +19,7 @@ export class FormPersonalDetails extends Component {
   render() {
     const { values, handleChange } = this.props;
     return (
-      <Box m={5}>
+      <Box m={2}>
         <React.Fragment>
           <h1>Enter Personal Detail</h1>
           <TextField
