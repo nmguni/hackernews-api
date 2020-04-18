@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Link, Route } from "react-router-dom";
 import { Jobs } from "./jobs";
 import { NewStories } from "./newStories";
-import { Comments } from "./comments";
 import { Signin } from "./signin";
+import { HomePage } from "./home";
 
 import HeaderStyles from "../styles/header.module.css";
 
@@ -14,7 +14,7 @@ class Nav extends Component {
   }
 
   changeApiTetx = () => {
-    this.setState({ title: "Stories" });
+    this.setState({ title: " " });
   };
   changeApiTetxJobs = () => {
     this.setState({ title: "Jobs" });
@@ -39,9 +39,9 @@ class Nav extends Component {
             <li>
               {" "}
               <Link
+                onClick={this.changeApiTetx}
                 className={HeaderStyles.navItem}
-                activeClassName={HeaderStyles.activeNavItem}
-                to="/"
+                to="/HomePage"
               >
                 Home
               </Link>
@@ -51,7 +51,6 @@ class Nav extends Component {
               <Link
                 onClick={this.changeApiTetx}
                 className={HeaderStyles.navItem}
-                activeClassName={HeaderStyles.activeNavItem}
                 to="/newStories"
               >
                 New Stories
@@ -62,7 +61,6 @@ class Nav extends Component {
               <Link
                 onClick={this.changeApiTetxJobs}
                 className={HeaderStyles.navItem}
-                activeClassName={HeaderStyles.activeNavItem}
                 to="/jobs"
               >
                 {" "}
@@ -72,20 +70,8 @@ class Nav extends Component {
             <li>
               {" "}
               <Link
-                onClick={this.changeApiTetxComents}
-                className={HeaderStyles.navItem}
-                activeClassName={HeaderStyles.activeNavItem}
-                to="/comments"
-              >
-                Comments
-              </Link>
-            </li>
-            <li>
-              {" "}
-              <Link
                 onClick={this.changeApiTetxSignin}
                 className={HeaderStyles.navItem}
-                activeClassName={HeaderStyles.activeNavItem}
                 to="/signin"
               >
                 {" "}
@@ -95,9 +81,8 @@ class Nav extends Component {
           </ul>
         </nav>
         <Route path="/jobs" component={Jobs} />
-        {/* <Route path="/" component={StoriesContainer} /> */}
+        <Route path="/homePage" component={HomePage} />
         <Route path="/newStories" component={NewStories} />
-        <Route path="/comments" component={Comments} />
         <Route path="/signin" component={Signin} />
       </div>
     );

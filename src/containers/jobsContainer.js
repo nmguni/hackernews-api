@@ -1,18 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { getJobIds, getStory } from "../services/hnApi";
+import React, { useEffect, useState, memo } from "react";
+import { getJobIds } from "../services/hnApi";
 import { Jobs } from "../components/jobs";
 import {
   StoriesContainerWrapper,
   GlobalStyle
 } from "../styles/StoriesContainerStyles";
-import {
-  StoryWrapper,
-  StoryTitle,
-  StoryMeta,
-  StoryMetaElement
-} from "../styles/StoryStyles";
+import { useInfiniteScroll } from "../hooks/useInfiniteScroll";
 
 export const JobsContainer = () => {
+  const { count } = useInfiniteScroll();
   const [storyIds, setStoryIds] = useState([]);
 
   useEffect(() => {
@@ -22,9 +18,8 @@ export const JobsContainer = () => {
   return (
     <>
       <GlobalStyle />
-      <h1>Hacker news APi</h1>
       <StoriesContainerWrapper dtat-test-id="stories-container">
-        {storyIds.map(storyId => (
+        {storyIds.slice(0, count).map(storyId => (
           <Jobs key={storyId} storyId={storyId} />
         ))}
       </StoriesContainerWrapper>

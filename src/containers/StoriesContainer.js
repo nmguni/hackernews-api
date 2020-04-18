@@ -6,11 +6,9 @@ import {
   GlobalStyle
 } from "../styles/StoriesContainerStyles";
 import { useInfiniteScroll } from "../hooks/useInfiniteScroll";
-import { Header } from "./headerContainer";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Nav from "./nav";
+import { BrowserRouter as Router } from "react-router-dom";
 export const StoriesContainer = () => {
-  // const { count } = useInfiniteScroll();
+  const { count } = useInfiniteScroll();
   const [storyIds, setStoryIds] = useState([]);
 
   useEffect(() => {
@@ -18,21 +16,17 @@ export const StoriesContainer = () => {
   }, []);
 
   // [] when them component mounts do this...
-  //[stoyIdsUpdates (true/false)] useEffect will watch for change
+  // [stoyIdsUpdates (true/false)] useEffect will watch for change
 
   return (
     <div>
       <Router>
         <GlobalStyle />
-        {/* <Header /> */}
-        <Nav />
-
-        {/* <StoriesContainerWrapper dtat-test-id="stories-container">
-          <h1>Hacker News Stories</h1>
+        <StoriesContainerWrapper dtat-test-id="stories-container">
           {storyIds.slice(0, count).map(storyId => (
             <Story key={storyId} storyId={storyId} />
           ))}
-        </StoriesContainerWrapper> */}
+        </StoriesContainerWrapper>
       </Router>
     </div>
   );

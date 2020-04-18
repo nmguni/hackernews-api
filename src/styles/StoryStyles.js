@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StoryWrapper = styled.section`
   ${"" /* padding-top: 10px; */}
   margin-bottom: 20px;
-  background-color: #90caf9;
+  background-color: #364f6b;
   border-radius: 4px;
   padding: 18px;
   line-height: 2rem;
@@ -37,13 +37,17 @@ export const StoryTitle = styled.h1`
     border-radius: 4px;
   }
   a:hover {
-    background-color: #bbdefb;
+    background-color: #fafafe;
+    color: rgba(0, 0, 0, 0.7);
   }
 `;
 
 export const StoryMeta = styled.div`
   font-style: italic;
-
+width: 40%;
+padding: .2rem;
+border-radius: 4px;
+background-color: #ffffffab;
 
   > span:first-child {
     margin-right: 10px;
@@ -61,5 +65,5 @@ export const StoryMeta = styled.div`
 
 export const StoryMetaElement = styled.span`
   font-weight: 800;
-  color: ${props => props.color || "red"};
+  color: ${(props) => props.color || "red"};
 `;

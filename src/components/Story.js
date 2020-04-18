@@ -6,7 +6,7 @@ import {
   StoryWrapper,
   StoryTitle,
   StoryMeta,
-  StoryMetaElement
+  StoryMetaElement,
 } from "../styles/StoryStyles";
 import { mapTime } from "../mappers/mapTime";
 
@@ -14,28 +14,26 @@ export const Story = ({ storyId }) => {
   const [story, setStory] = useState({});
 
   useEffect(() => {
-    getStory(storyId).then(data => data && data.url && setStory(data));
+    getStory(storyId).then((data) => data && data.url && setStory(data));
   }, []);
 
-  // return story && story.url ? (
-  //   <StoryWrapper data-test-id="story">
-  //     <StoryTitle>
-  //       <a title="Up Vote">^</a>
-  //       <a href={story.url}>{story.title}</a>
-  //     </StoryTitle>
+  return story && story.url ? (
+    <StoryWrapper data-test-id="story">
+      <StoryTitle>
+        <a href={story.url}>{story.title}</a>
+      </StoryTitle>
 
-  //     <StoryMeta>
-  //       <span data-tested="story-by">
-  //         <StoryMetaElement color="#000">By:</StoryMetaElement>
-  //         {story.by}
-  //       </span>
+      <StoryMeta>
+        <span data-tested="story-by">
+          <StoryMetaElement color="#000">By: </StoryMetaElement>
+          {story.by}
+        </span>
 
-  //       <span data-tested="story-tim">
-  //         <StoryMetaElement color="#000">Posted: </StoryMetaElement>
-  //         {mapTime(story.time)}
-  //       </span>
-  //     </StoryMeta>
-  //   </StoryWrapper>
-  // ) : null;
-  return <p>Im story</p>;
+        <span data-tested="story-tim">
+          <StoryMetaElement color="#000">Posted: </StoryMetaElement>
+          {mapTime(story.time)}
+        </span>
+      </StoryMeta>
+    </StoryWrapper>
+  ) : null;
 };

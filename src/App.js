@@ -1,11 +1,12 @@
 import React from "react";
-import { StoriesContainer } from "./containers/StoriesContainer";
-import { JobsContainer } from "./containers/jobsContainer";
-import { Ask } from "./containers/askContainer";
-import { UserForm } from "./components/userForm";
-import { Signin } from "./containers/signin";
+import Nav from "./containers/nav";
+import { BrowserRouter as Router } from "react-router-dom";
 
-export const App = () => <StoriesContainer />;
+export const App = () => (
+  <Router>
+    <Nav />{" "}
+  </Router>
+);
 
 // export const App = () => {
 //   const [storyIds, setStoryIds] = useState([]);
