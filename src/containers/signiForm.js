@@ -1,16 +1,16 @@
 import React from "react";
-import UserForm from "../components/userForm";
+import Signup from "../components/1-signup";
 import {
   StoriesContainerWrapper,
-  GlobalStyle
+  GlobalStyle,
 } from "../styles/StoriesContainerStyles";
 
-export const Signin = () => {
+export const SigniForm = () => {
   return (
     <div>
       <GlobalStyle />
       <StoriesContainerWrapper data-test-id="stories-container">
-        <UserForm />
+        <Signup />
       </StoriesContainerWrapper>
     </div>
   );

@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { Link, Route } from "react-router-dom";
 import { Jobs } from "./jobs";
 import { NewStories } from "./newStories";
-import { Signin } from "./signin";
-import { HomePage } from "./home";
+import { SigniForm } from "./signiForm";
 
 import HeaderStyles from "../styles/header.module.css";
 
@@ -24,7 +23,7 @@ class Nav extends Component {
   };
 
   changeApiTetxSignin = () => {
-    this.setState({ title: "Signin" });
+    this.setState({ title: "Submit" });
   };
 
   render() {
@@ -36,16 +35,6 @@ class Nav extends Component {
           </h3>
 
           <ul className={HeaderStyles.navList}>
-            <li>
-              {" "}
-              <Link
-                onClick={this.changeApiTetx}
-                className={HeaderStyles.navItem}
-                to="/HomePage"
-              >
-                Home
-              </Link>
-            </li>
             <li>
               {" "}
               <Link
@@ -72,18 +61,17 @@ class Nav extends Component {
               <Link
                 onClick={this.changeApiTetxSignin}
                 className={HeaderStyles.navItem}
-                to="/signin"
+                to="/signiForm"
               >
                 {" "}
-                Sign In
+                Submit
               </Link>
             </li>
           </ul>
         </nav>
         <Route path="/jobs" component={Jobs} />
-        <Route path="/homePage" component={HomePage} />
         <Route path="/newStories" component={NewStories} />
-        <Route path="/signin" component={Signin} />
+        <Route path="/signiForm" component={SigniForm} />
       </div>
     );
   }
