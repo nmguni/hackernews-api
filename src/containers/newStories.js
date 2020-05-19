@@ -6,7 +6,7 @@ export const NewStories = () => {
   const [storyIds, setStoryIds] = useState([]);
 
   useEffect(() => {
-    getStroyIds().then(data => setStoryIds(data));
+    getStroyIds().then((data) => setStoryIds(data));
   }, []);
 
   return (

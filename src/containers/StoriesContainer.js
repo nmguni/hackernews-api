@@ -1,9 +1,9 @@
-import React, { useEffect, useState, memo } from "react";
+import React, { useEffect, useState } from "react";
 import { getStroyIds } from "../services/hnApi";
 import { Story } from "../components/Story";
 import {
   StoriesContainerWrapper,
-  GlobalStyle
+  GlobalStyle,
 } from "../styles/StoriesContainerStyles";
 import { useInfiniteScroll } from "../hooks/useInfiniteScroll";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -12,7 +12,7 @@ export const StoriesContainer = () => {
   const [storyIds, setStoryIds] = useState([]);
 
   useEffect(() => {
-    getStroyIds().then(data => setStoryIds(data));
+    getStroyIds().then((data) => setStoryIds(data));
   }, []);
 
   // [] when them component mounts do this...
@@ -23,7 +23,7 @@ export const StoriesContainer = () => {
       <Router>
         <GlobalStyle />
         <StoriesContainerWrapper dtat-test-id="stories-container">
-          {storyIds.slice(0, count).map(storyId => (
+          {storyIds.slice(0, count).map((storyId) => (
             <Story key={storyId} storyId={storyId} />
           ))}
         </StoriesContainerWrapper>

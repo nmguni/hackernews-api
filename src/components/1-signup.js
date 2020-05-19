@@ -86,6 +86,7 @@ class Signup extends React.Component {
                 {this.state.signupError}
               </Typography>
             ) : null}
+
             <h5 className={classes.hasAccountHeader}>
               Already Have An Account?
             </h5>

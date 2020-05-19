@@ -11,7 +11,7 @@ const styles = (theme) => ({
     },
   },
   title: {
-    fontSize: "3.5rem",
+    fontSize: "2rem",
     fontWeight: "600",
     letterSpacing: ".2rem",
     color: "#151515c2",
@@ -37,18 +37,20 @@ const styles = (theme) => ({
   },
   noAccountHeader: {
     width: "100%",
-    width: "100%",
     color: "#3d4447",
     fontSize: ".8rem",
     letterSpacing: ".8px",
+    margin: ".8rem",
   },
   signUpLink: {
     width: "100%",
     textDecoration: "none",
-    color: "#17b978",
+    color: "#364f6b",
     fontSize: "1rem",
-
     fontWeight: "bold",
+    "&:hover": {
+      color: "#15151582",
+    },
   },
   errorText: {
     color: "red",

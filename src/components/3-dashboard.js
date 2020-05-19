@@ -5,19 +5,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Button from "@material-ui/core/Button";
 import styles from "../styles/dashboardStyles";
-import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& .MuiTextField-root": {
-      margin: theme.spacing(1),
-      width: "50ch",
-    },
-  },
-}));
-
-const firebase = require("firebase");
 
 class Dashboard extends React.Component {
   render() {

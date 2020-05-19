@@ -1,5 +1,3 @@
-import styled from "styled-components";
-
 const styles = (theme) => ({
   main: {
     width: "auto",
@@ -13,7 +11,7 @@ const styles = (theme) => ({
     },
   },
   title: {
-    fontSize: "3.5rem",
+    fontSize: "2rem",
     fontWeight: "600",
     letterSpacing: ".2rem",
     color: "#151515c2",
@@ -43,14 +41,19 @@ const styles = (theme) => ({
     color: "#3d4447",
     fontSize: ".8rem",
     letterSpacing: ".8px",
+    margin: ".8rem",
   },
   logInLink: {
     width: "100%",
     textDecoration: "none",
-    color: "#17b978",
+    color: "#364f6b",
     fontWeight: "bold",
     fontSize: "1rem",
     letterSpacing: ".8px",
+
+    "&:hover": {
+      color: "#15151582",
+    },
   },
   errorText: {
     color: "red",
