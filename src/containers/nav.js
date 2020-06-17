@@ -56,7 +56,7 @@ class Nav extends Component {
                 Jobs{" "}
               </Link>
             </li>
-            <li>
+            {/* <li>
               {" "}
               <Link
                 onClick={this.changeApiTetxSignin}
@@ -66,12 +66,12 @@ class Nav extends Component {
                 {" "}
                 Submit
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
         <Route path="/jobs" component={Jobs} />
         <Route path="/newStories" component={NewStories} />
-        <Route path="/signiForm" component={SigniForm} />
+        {/* <Route path="/signiForm" component={SigniForm} /> */}
       </div>
     );
   }
