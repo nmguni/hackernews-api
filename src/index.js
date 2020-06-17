@@ -7,16 +7,14 @@ const firebase = require("firebase");
 require("firebase/firestore");
 
 firebase.initializeApp({
-  apiKey: "AIzaSyDjqer2K83Q_Reez0O2MtgjopvAayetseo",
-  authDomain: "hackernews-fae50.firebaseapp.com",
-  databaseURL: "https://hackernews-fae50.firebaseio.com",
-  projectId: "hackernews-fae50",
-  storageBucket: "hackernews-fae50.appspot.com",
-  messagingSenderId: "518016962615",
-  appId: "1:518016962615:web:4d5ca99181f17d96576fb2",
-  measurementId: "G-J2E9QEP23V",
+  apiKey: "AIzaSyBY5MIY5vYg18f-qJzanp7mkGc-FQFWcmw",
+  authDomain: "hacker-login.firebaseapp.com",
+  databaseURL: "https://hacker-login.firebaseio.com",
+  projectId: "hacker-login",
+  storageBucket: "hacker-login.appspot.com",
+  messagingSenderId: "331049651253",
+  appId: "1:331049651253:web:3f1a9ea3992f908f83757c",
+  measurementId: "G-W02MB9FEMZ",
 });
 
 render(<App />, document.getElementById("root"));
-
-serviceWorker.register();
